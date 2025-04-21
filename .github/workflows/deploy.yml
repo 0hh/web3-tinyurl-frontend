@@ -15,9 +15,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./vite-project
 
     - name: Build
       run: npm run build
+      working-directory: ./vite-project
 
     - name: Deploy to S3
       uses: aws-actions/configure-aws-credentials@v1
@@ -29,4 +31,3 @@ jobs:
     - name: Sync S3 bucket
       run: |
         aws s3 sync ./build s3://tiny.0o.is --delete
-        aws s3 cp ./build/index.html s3://tiny.0o.is/index.html
