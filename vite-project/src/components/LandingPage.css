@@ -1,13 +1,18 @@
-body {
+html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #000000;
-    /* Optional background color */
+    justify-content: center;
+    padding: 1em;
+    background: #000000;
+    overflow: hidden;
+    touch-action: none;
 }
 
 h1 {
@@ -73,61 +78,9 @@ div {
     transform: scale(1.05);
     border-color: #9dff00;
     border: 1px;
-    border-style:dashed;
+    border-style: dashed;
     border-radius: 0px;
     ;
-}
-
-
-/* Band container */
-.moving-band {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 200%;
-    height: 60px;
-    background-color: #000000;
-    overflow: hidden;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 62px;
-    color: #888;
-}
-
-/* Band container */
-.moving-band-top {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 60px;
-    background-color: #000000;
-    overflow: hidden;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 62px;
-    color: #888;
-}
-
-/* Band content */
-.moving-band span {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 5.5rem;
-    color: #242424;
-    animation: move-left 500s linear infinite;
 }
 
 /* Selection styling */
@@ -136,23 +89,52 @@ div {
     background: #ff00f2;
 }
 
-/* Animation */
-@keyframes move-left {
-    0% {
-        transform: translateX(0);
-        /* Start fully visible */
-    }
-
-    100% {
-        transform: translateX(-100%);
-        /* Move completely out of view to the left */
-    }
+.xxxbandarole-top {
+    display: flex;
+    min-height: 1em;
+    background: #171E2E;
+    color: #FFF;
+    padding: 2px;
+    line-height: 1.4;
+    text-align: center;
+    transform: translateZ(0);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Roboto", Helvetica;
+    animation-play-state: paused;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    overflow: hidden;
+    animation: scroll 30s linear 1s infinite;
 }
 
-/* Band content */
-.moving-band-top span {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 5.5rem;
-    color: #242424;
-    animation: move-left 500s linear infinite;
+.xxxbandarole-bottom {
+    display: flex;
+    min-height: 1em;
+    background: #171E2E;
+    color: #FFF;
+    padding: 2px;
+    line-height: 1.4;
+    text-align: center;
+    transform: translateZ(0);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Roboto", Helvetica;
+    animation-play-state: paused;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    overflow: hidden;
+    animation: scroll 30s linear 1s infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-160%);
+    }
+}
