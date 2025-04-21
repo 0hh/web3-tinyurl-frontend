@@ -36,7 +36,9 @@ const InstallMetaMaskModal: React.FC<InstallMetaMaskModalProps> = ({ show, onClo
                         Get the MetaMask Browser Extension
                     </a>
                 </button>
-                <button onClick={onClose} className="button">Close</button>
+                <div>
+                    <button onClick={onClose} className="button">X</button>
+                </div>
             </div>
         </div>
     );
