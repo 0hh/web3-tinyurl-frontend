@@ -29,3 +29,4 @@ jobs:
     - name: Sync S3 bucket
       run: |
         aws s3 sync ./build s3://tiny.0o.is --delete
+        aws s3 cp ./build/index.html s3://tiny.0o.is/index.html
