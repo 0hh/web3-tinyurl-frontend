@@ -1,35 +1,31 @@
-name: Frontend Deployment
+name: Deploy Frontend
 
 on:
   push:
     branches:
-      - prod
+      - dev
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20.19.0'
-
     - name: Install dependencies
       run: npm install
 
-    - name: Build project
+    - name: Build
       run: npm run build
 
     - name: Deploy to S3
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'eu-central-1'
-        S3_BUCKET_NAME: 'tiny.0o.is'
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-central-1
+
+    - name: Sync S3 bucket
       run: |
-        npm install -g aws-cli
-        aws s3 sync ./dist s3://$S3_BUCKET_NAME --delete
+        aws s3 sync ./build s3://tiny.0o.is --delete
