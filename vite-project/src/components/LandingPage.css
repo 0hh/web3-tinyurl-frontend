@@ -21,7 +21,6 @@ h1 {
     font-weight: 500;
     font-style: normal;
     color: #ffffff;
-    /* White text */
 }
 
 div {
@@ -75,36 +74,31 @@ div {
     border-radius: 0px;
 }
 
+/* Active state for shorten-button */
 .shorten-button:active {
     color: rgb(255, 0, 200);
     background-color: #9dff00;
     transform: scale(1.05);
-    border-color: #9dff00;
-    border: 1px;
-    border-style: dashed;
-    border-radius: 0px;
-    ;
+    border: 1px dashed #9dff00;
+    border-radius: 0;
 }
 
-
+/* Text selection styling */
 ::selection {
     color: #9dff00;
     background: #ff00f2;
 }
 
+/* Responsive styles for small screens */
 @media (max-width: 500px) {
     h1 {
         white-space: normal;
         width: 100vw;
         margin: 0 auto;
-        /* Center the h1 element */
         text-align: center;
-        /* Optional: Center-align text for better appearance */
+        /* Center the h1 element */
     }
-}
 
-
-@media (max-width: 500px) {
     .input-field {
         white-space: normal;
         width: 75vw;
@@ -114,6 +108,7 @@ div {
     }
 }
 
+/* Top band styling */
 .band-top {
     display: flex;
     min-height: 1em;
