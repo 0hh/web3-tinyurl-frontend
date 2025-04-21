@@ -1,5 +1,5 @@
 # web3-tinyurl-frontend
 Decentralized App for Short URLs
 
-Created ./build in S3
-Update Github Action
+![Landing Page](./readme_landingpage.png)
+
