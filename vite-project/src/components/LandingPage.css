@@ -28,11 +28,11 @@ div {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    margin-top: 10px;
+
     padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    width: 600px;
+    border-radius: 0px;
+    border: 0px solid #ccc;
     background-color: rgb(236, 236, 236);
     color: #000000;
     outline: none;
@@ -44,11 +44,13 @@ div {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    margin-top: 10px;
+    margin-top: 40px;
     padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #007bff;
+    border: 1px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #ffffff;
+    background-color: #000000;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -56,13 +58,26 @@ div {
 }
 
 .shorten-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+    transform: scale(1);
+    color: #9dff00;
+    background-color: #ff00f2;
+    border-color: #9dff00;
+    border: 1px;
+    border-style: dotted;
+    border-radius: 0px;
 }
 
 .shorten-button:active {
-    transform: scale(1);
+    color: rgb(255, 0, 200);
+    background-color: #9dff00;
+    transform: scale(1.05);
+    border-color: #9dff00;
+    border: 1px;
+    border-style:dashed;
+    border-radius: 0px;
+    ;
 }
+
 
 /* Band container */
 .moving-band {
@@ -115,7 +130,11 @@ div {
     animation: move-left 500s linear infinite;
 }
 
-
+/* Selection styling */
+::selection {
+    color: #9dff00;
+    background: #ff00f2;
+}
 
 /* Animation */
 @keyframes move-left {
