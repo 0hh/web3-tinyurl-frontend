@@ -26,7 +26,6 @@
     border-radius: 0px;
 }
 
-/* Active state for login-button */
 .login-button:active {
     color: rgb(255, 0, 200);
     background-color: #9dff00;
@@ -34,4 +33,3 @@
     border: 1px dashed #9dff00;
     border-radius: 0;
 }
-
