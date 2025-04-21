@@ -110,3 +110,51 @@ div {
         text-align: center;
     }
 }
+
+.band-top {
+    display: flex;
+    min-height: 1em;
+    background: #000000;
+    color: #525252;
+    padding: 2px;
+    line-height: 1.4;
+    text-align: center;
+    transform: translateZ(0);
+    cursor: default;
+    font-size: 100px;
+    font-family: "Roboto", Helvetica;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    overflow: hidden;
+    animation: scroll 60s linear 1s infinite;
+}
+
+.band-bottom {
+    display: flex;
+    min-height: 1em;
+    background: #000000;
+    color: #525252;
+    padding: 2px;
+    line-height: 1.4;
+    text-align: center;
+    transform: translateZ(0);
+    cursor: default;
+    font-size: 100px;
+    font-family: "Roboto", Helvetica;
+    position: absolute;
+    bottom: 0;
+    left: 110%;
+    overflow: hidden;
+    animation: scroll 60s linear 1s infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-160%);
+    }
+}
