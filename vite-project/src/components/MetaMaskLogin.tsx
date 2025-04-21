@@ -25,7 +25,7 @@ const MetaMaskLogin: React.FC = () => {
     return (
         <div>
             <button onClick={connectWallet} className="login-button">
-                {walletAddress ? `Connected: ${walletAddress}` : 'Connect Wallet'}
+                {walletAddress ? `🦊 ${walletAddress.slice(0, 7)}...` : 'Connect Wallet'}
             </button>
             <InstallMetaMaskModal show={showModal} onClose={() => setShowModal(false)} />
         </div>
