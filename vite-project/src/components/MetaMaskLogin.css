@@ -1,0 +1,37 @@
+.login-button {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    top: 0;
+    height: 60px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #ffffff;
+    background-color: #000000;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+    transform: scale(1);
+    color: #9dff00;
+    background-color: #ff00f2;
+    border-color: #9dff00;
+    border: 1px;
+    border-style: dotted;
+    border-radius: 0px;
+}
+
+/* Active state for login-button */
+.login-button:active {
+    color: rgb(255, 0, 200);
+    background-color: #9dff00;
+    transform: scale(1.05);
+    border: 1px dashed #9dff00;
+    border-radius: 0;
+}
+

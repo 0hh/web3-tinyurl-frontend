@@ -1,5 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
+import MetaMaskLogin from './MetaMaskLogin';
 
 const LandingPage = () => {
   const [url, setUrl] = React.useState('');
@@ -18,6 +19,9 @@ const LandingPage = () => {
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap"
         rel="stylesheet"
       />
+      <div className="login-button-position">
+        <MetaMaskLogin />
+      </div>
       {/* Moving band */}
       <div className="band-top">
         <span>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</span>
